@@ -1,2 +1,67 @@
+.layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.mainContent {
+    flex: 1;
+}
 
+#thumbMap {
+    width: 100%;
+    display: block;
+    cursor: crosshair;
+}
+
+#thumbMarkers,
+#fullMarkers {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.marker {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#lightBox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    
+    z-index: 1000;
+}
+
+#overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.75);
+}
+
+#thumbWrap {
+    position: sticky;
+    flex-shrink: 0;
+    top: 20px;
+    width: 400px;
+}
+#lightBoxContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+#mapLarge {
+    max-width: 90vw;
+    max-height: 90vh;
+
+    cursor: crosshair;
+}
 
